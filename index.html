@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Alumni 6A</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <main x-data="start()" class="d-flex justify-content-center">
+        <div class="card shadow-lg w-100 w-md-75">
+            <div class="card-header text-center bg-primary text-white p-3">
+                <h1 class="mt-3">Daftar Siswa</h1>
+                <p class="mb-0">Alumni Siswa Kelas 6A | SDN 1 Kertamulya</p>
+                <div>Tahun Ajaran 2018/2019</div>
+            </div>
+            <div class="">
+                <table class="table table-striped table-hover align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Instagram</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template x-for="item in items" :key="item.id">
+                            <tr>
+                                <td x-text="item.id"></td>
+                                <td x-text="item.name"></td>
+                                <td>
+                                    <a :href="`https://instagram.com/${item.instagram}`" target="_blank"
+                                        class="text-decoration-none">
+                                        @<span x-text="item.instagram"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- footer -->
+        </div>
+    </main>
+
+    <script>
+        const mahasiswa = [
+            { id: 1, name: "Rifqi Efendi", instagram: "" },
+            { id: 2, name: "Anggita", instagram: "" },
+            { id: 3, name: "Aulia Salsabila", instagram: "aullia_aaa" },
+            { id: 4, name: "Aulia Rahmawati", instagram: "" },
+            { id: 5, name: "Ayu Radianti", instagram: "" },
+            { id: 6, name: "Celine Leisya", instagram: "celeisyaa_" },
+            { id: 7, name: "Dzikri Azharwan", instagram: "theazharone" },
+            { id: 8, name: "Elfira Fitriani", instagram: "ellfraaa" },
+            { id: 9, name: "Ersa", instagram: "" },
+            { id: 10, name: "Fadli Akbar", instagram: "one.fdzl" },
+            { id: 11, name: "Fernanda Dwi Cahaya", instagram: "frnann6" },
+            { id: 12, name: "Hasna Nur Azizah", instagram: "hasnanrzh" },
+            { id: 13, name: "Mei Dina", instagram: "anatsy.aa_" },
+            { id: 14, name: "Muhammad Nauval Rivaldi", instagram: "mnauval_rivaldi" },
+            { id: 15, name: "Moch Abdul Rizal", instagram: "abdulrizallll_" },
+            { id: 16, name: "Muhammad Fasya Ishaq", instagram: "planetafsy" },
+            { id: 17, name: "Rasya Aulia", instagram: "rasya_app" },
+            { id: 18, name: "Rendi Ramdani", instagram: "rendungg" },
+            { id: 19, name: "Salsa Ardhya Putri", instagram: "salssaardh" },
+            { id: 20, name: "Sanjani Anggara Putra", instagram: "" },
+            { id: 21, name: "Tia", instagram: "" },
+            { id: 22, name: "Tio Eka Putra", instagram: "___theyoe" },
+            { id: 23, name: "Yasrifa Azmalia Hildayanti", instagram: "yasrifaazmal" },
+            { id: 24, name: "Diva", instagram: "" },
+            { id: 25, name: "Amanda Putri", instagram: "amandaputri.13" },
+            { id: 26, name: "Daffa Ramdani", instagram: "dffa_rmdhni" },
+            { id: 27, name: "Yuri Arrizqi", instagram: "qizyur" },
+            { id: 28, name: "Rajib", instagram: "" },
+        ]
+
+        function start() {
+            return {
+                items: mahasiswa
+            }
+        }
+    </script>
+</body>
+
+</html>
