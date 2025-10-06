@@ -24,24 +24,31 @@
             </div>
             <div class="">
                 <table class="table table-striped table-hover align-middle">
-                    <thead class="table-dark">
+                    <thead class="table-dark text-center">
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
                             <th>Instagram</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-center">
                         <template x-for="item in items" :key="item.id">
                             <tr>
                                 <td x-text="item.id"></td>
                                 <td x-text="item.name"></td>
                                 <td>
-                                    <a :href="`https://instagram.com/${item.instagram}`" target="_blank"
-                                        class="text-decoration-none">
+                                    <span class="text-primary">
                                         @<span x-text="item.instagram"></span>
+                                    </span>
+                                </td>
+                                <td>
+                                    <a :href="`https://instagram.com/${item.instagram}`" target="_blank"
+                                        class="btn btn-primary text-decoration-none" :disabled="!item.instagram">
+                                        view
                                     </a>
                                 </td>
+
                             </tr>
                         </template>
                     </tbody>
