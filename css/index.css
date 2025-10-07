@@ -2,11 +2,8 @@
             background: linear-gradient(180deg, #0d1117 0%, #3b2f8f 100%);
         }
 
-        .card {
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            opacity: 0;
+        .card-wrapper{
+                        opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 1.3s ease forwards;
         }
@@ -16,6 +13,12 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        .card {
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
 
         .card:hover {
