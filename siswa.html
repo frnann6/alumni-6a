@@ -37,7 +37,7 @@
                         <template x-for="item in items" :key="item.id">
                             <tr>
                                 <td x-text="item.id"></td>
-                                <td x-text="item.name"></td>
+                                <td x-text="item.name" class="fw-bold"></td>
                                 <td>
                                     <span class="text-primary">
                                         @<span x-text="item.instagram"></span>
@@ -47,7 +47,7 @@
                                     <template x-if="item.instagram">
                                         <a :href="`https://instagram.com/${item.instagram}`" target="_blank"
                                             class="btn btn-primary text-decoration-none">
-                                            view
+                                            <span class="fw-bold">view</span>
                                         </a>
                                     </template>
                                     <template x-if="!item.instagram">
