@@ -27,6 +27,7 @@ const mahasiswa = [
   { id: 26, name: "Daffa Ramdani", instagram: "dffa_rmdhni" },
   { id: 27, name: "Yuri Arrizqi", instagram: "qizyur" },
   { id: 28, name: "Rajib", instagram: "" },
+  { id: 29, name: "Fadlan Azka", instagram: "_fadlanazka" },
 ];
 
 function start() {
